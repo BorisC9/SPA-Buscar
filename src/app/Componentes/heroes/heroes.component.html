@@ -1,0 +1,33 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="Buscar héroe..." [(ngModel)]="terminoBusqueda">
+    <button class="btn btn-outline-secondary" type="button" (click)="buscarHeroes()">Buscar</button>
+</div>
+<hr />
+
+<div class="row row-cols-md-3">
+    <div class="col" *ngFor="let heroe of heroesEncontrados; let i = index">
+        <div class="card mb-3">
+            <img [src]="heroe.img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Heroes <small>Marvel y DC</small></h1>
+<hr />
+<div class="row row-cols-md-3">
+    <div class="col" *ngFor="let heroe of heroes; let i = index">
+        <div class="card mb-3">
+            <img [src]="heroe.img" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{heroe.nombre}}</h5>
+                <p class="card-text">{{heroe.bio}}</p>
+                <button (click)="verHeroe(i)" type="button" class="btn btn-primary">Ver Más</button>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>

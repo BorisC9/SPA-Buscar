@@ -1,0 +1,16 @@
+.row{
+    justify-content: space-around;
+}
+.card-text{
+    text-align: justify;
+}
+.card-img-top{
+    height: 350px;
+}
+.footer{
+    margin: 2rem 0;
+    width: 100%;
+}
+.footer p{
+    text-align: center;
+}

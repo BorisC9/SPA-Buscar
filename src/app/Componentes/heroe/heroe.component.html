@@ -1,0 +1,23 @@
+<h1>{{heroe.nombre}} | <small>{{heroe.aparicion}}</small> </h1>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <br><br>
+        <img src={{heroe.img}} alt="">
+    </div>
+
+    <div class="col-md-8">
+        <h3 style="color: rgb(255, 255, 255);">{{heroe.nombre}}</h3>
+
+        <hr>
+        <p style="background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);">
+            {{heroe.bio}}
+
+        </p>
+        <div>
+
+            <img [src]="heroe?.casa === 'Marvel' ? 'assets/img/marvel.png' : 'assets/img/dc.png'" alt="" width="200px">
+        </div>
+        <a href="heroes" class="btn btn-outline-danger btn-block" routerLink="active" [routerLink]="['/heroes']">Regresar</a>
+    </div>
+</div>
